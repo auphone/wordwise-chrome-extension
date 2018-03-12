@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+
+  "name": "Word Wise Translator",
+  "description": "This extension is able to translate the site content like Amazon Word Wise.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "lib/jquery-3.3.1.min.js",
+      "lib/translator.js",
+      "script/background.js"
+    ]
+  },
+  "options_page": "page/options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "css": [
+        "css/style.css"
+      ],
+      "js": [
+        "lib/jquery-3.3.1.min.js",
+        "lib/stopwords.js",
+        "lib/translator.js",
+        "script/content_script.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

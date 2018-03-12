@@ -1,0 +1,15 @@
+body.ww-trans p {
+  line-height: 3em;
+}
+.ww-trans-word { 
+  position: relative; 
+  text-decoration: underline;  
+} 
+.ww-trans-word:before {
+  content: attr(data-before);
+  position: absolute;
+  top: -1.8em;
+  left: 0;
+  width: 200px;
+  height: 0;
+}

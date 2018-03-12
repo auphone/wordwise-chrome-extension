@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head><title>Word Wise Options</title></head>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/select2.css">
+<link rel="stylesheet" href="../css/options.css">
+<script src="../lib/jquery-3.3.1.min.js"></script>
+<script src="../lib/select2.min.js"></script>
+<script src="../lib/languages.js"></script>
+<body>
+  <div class="container">
+    <table class="table">
+      <thead>
+        <th colspan="2">Settings</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Server</td>
+          <td><input id="server-url" class="form-control" type="text"></td>
+        </tr>
+        <tr>
+          <td>Password (if any)</td>
+          <td><input id="password" class="form-control" type="password"></td>
+        </tr>
+        <tr>
+          <td>Language</td>
+          <td><select id="language"></select></td>
+        </tr>
+        <tr>
+          <td>Levels</td>
+          <td><div id="levels"></div></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="cb-auto-trans">
+              <label class="form-check-label" for="cb-auto-trans">
+                Auto translate on page loaded
+              </label>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+<script src="../script/options.js"></script>
+</body>
+</html>

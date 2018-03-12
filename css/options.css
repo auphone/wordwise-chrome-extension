@@ -1,0 +1,8 @@
+body > .container {
+  margin-top: 40px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
