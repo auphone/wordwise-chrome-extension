@@ -9,39 +9,45 @@
 <script src="../lib/languages.js"></script>
 <body>
   <div class="container">
-    <table class="table">
-      <thead>
-        <th colspan="2">Settings</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Server</td>
-          <td><input id="server-url" class="form-control" type="text"></td>
-        </tr>
-        <tr>
-          <td>Password (if any)</td>
-          <td><input id="password" class="form-control" type="password"></td>
-        </tr>
-        <tr>
-          <td>Language</td>
-          <td><select id="language"></select></td>
-        </tr>
-        <tr>
-          <td>Levels</td>
-          <td><div id="levels"></div></td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="cb-auto-trans">
-              <label class="form-check-label" for="cb-auto-trans">
-                Auto translate on page loaded
-              </label>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="row">
+      <div class="col-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Settings</h5>
+            <table class="table table-borderless">
+              <tbody>
+                <tr>
+                  <td>Server</td>
+                  <td><input id="server-url" class="form-control" type="text"></td>
+                </tr>
+                <tr>
+                  <td>Password (if any)</td>
+                  <td><input id="password" class="form-control" type="password"></td>
+                </tr>
+                <tr>
+                  <td>Language</td>
+                  <td><select id="language"></select></td>
+                </tr>
+                <tr>
+                  <td>Levels</td>
+                  <td><div id="levels"></div></td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="cb-auto-trans">
+                      <label class="form-check-label" for="cb-auto-trans">
+                        Auto translate on page loaded
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 <script src="../script/options.js"></script>

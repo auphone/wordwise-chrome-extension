@@ -1,8 +1,29 @@
-body > .container {
-  margin-top: 40px;
+body {
+	background: #eceff1;
 }
-
-h1 {
-  text-transform: uppercase;
-  font-size: 1.5em;
+body > .container {
+	margin-top: 40px;
+}
+.table-borderless th,
+.table-borderless td {
+	border: 0;
+}
+h5 {
+	text-transform: uppercase;
+	font-size: 1.5em;
+}
+.select2-container {
+	width: 100% !important;
+}
+.select2-results {
+	max-height: 200px;
+}
+.select2-selection__rendered {
+	line-height: 38px !important;
+}
+.select2-container .select2-selection--single {
+	height: 38px !important;
+}
+.select2-selection__arrow {
+	height: 37px !important;
 }
