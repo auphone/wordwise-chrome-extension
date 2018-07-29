@@ -1,17 +1,32 @@
 var translated = false;
+var translateTimeout = null;
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-  if(request.action === 'translate' && !translated) {
+  if (request.action === 'translate' && !translated) {
+    translated = true;
     appendStyle();
     translate();
-    translated = true;
+  }
+  if (request.message === 'reset') {
+    translated = false;
+    timeoutTranslate();
   }
 });
 
-chrome.storage.sync.get({
-  auto: false
-}, function(items) {
-  if(items.auto) {
-    appendStyle();
-    translate();
+function timeoutTranslate() {
+  if (translateTimeout) {
+    clearTimeout(translateTimeout);
   }
-});
+  translateTimeout = setTimeout(function() {
+    chrome.storage.sync.get(
+      {
+        auto: false
+      },
+      function(items) {
+        if (items.auto) {
+          appendStyle();
+          translate();
+        }
+      }
+    );
+  }, 500);
+}
